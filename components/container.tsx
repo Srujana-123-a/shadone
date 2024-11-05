@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import Link from "next/link";
 
-
-interface CategoryProps {
+export interface Category {
   title: string;
   imageUrl: string | StaticImageData;
 }
 
-const CategoryProps = ({ title, imageUrl }: CategoryProps) => {
+
+ export const CategoryComponent = ({ title, imageUrl }: Category) => {
   return (
     <div className="relative h-64 w-full overflow-hidden rounded-lg bg-[#40E0D0]/20 group">
       <div className="relative w-full h-[80%] p-4">
